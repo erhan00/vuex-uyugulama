@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    
-       <ul>
+    <p>VUEX Kutuphanesı ıle vue.js icerisinde state yonetimi, vuex state,getters,mutation,action metodlarının kullanımı ile</p>
+      <p>ornek kullanım detaylı degıl fakat Vuex mantıgı koda döküldü</p> 
+    <ul>
         <li class="TEST" v-for="ürün in ürünler" :key="ürün">
           <span>{{ " * " + ürün.isim }}</span> =
           <span>{{ürün.fiyat }}</span>
@@ -43,6 +44,7 @@ export default {
    return this.$store.state.ürünler
    },
 
+   //mapGetters içerisinde alias kullanıldı
   ...mapGetters({indirimUygulanmış : "indirimliÜrünler"})
   },
   methods:{
